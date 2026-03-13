@@ -10,10 +10,15 @@ Module Program
         Console.ReadKey()
 
         'Declaración de Array
-        Dim miArray() As String = {"Antonio", "Francisco", "Juan"}
+        Dim miArray(2) As String
+        miArray(0) = "Antonio"
+        miArray(1) = "Francisco"
+        miArray(2) = "Juan"
 
+        ReDim Preserve miArray(3)
+        miArray(3) = "Schiapparelli"
         'Mostramos el valor en la consola
-        Console.WriteLine(miArray(1))
+        Console.WriteLine(miArray(3))
         Console.Read()
     End Sub
 End Module
